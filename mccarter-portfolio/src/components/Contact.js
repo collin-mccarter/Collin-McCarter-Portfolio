@@ -7,6 +7,8 @@ const Contact = () => {
         message: ''
     });
 
+    const [errorMessage, setErrorMessage] = useState('');
+
     const { name, email, message } = formData;
 
     const handleChange = (e) => {
@@ -15,8 +17,24 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Validate email and message
+        if (!validateEmail(email)) {
+            setErrorMessage('Please enter a valid email address.');
+            return;
+        }
+
+        if (message.trim() === '') {
+            setErrorMessage('Please enter a message.');
+            return;
+        }
+
+        // Reset error message
+        setErrorMessage('');
+
         // Perform any necessary submission logic with the form data
         console.log(formData);
+
         // Reset the form fields
         setFormData({
             name: '',
@@ -25,43 +43,62 @@ const Contact = () => {
         });
     };
 
+    // Email validation function
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
     return (
         <section className="contact-page">
             <h2>Contact Me:</h2>
-            <form onSubmit={handleSubmit}>
+            <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Name:</label>
+                    <label htmlFor="name" className="form-label">
+                        Name:
+                    </label>
                     <input
                         type="text"
                         id="name"
                         name="name"
                         value={name}
                         onChange={handleChange}
+                        className="form-input"
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email" className="form-label">
+                        Email:
+                    </label>
                     <input
                         type="email"
                         id="email"
                         name="email"
                         value={email}
                         onChange={handleChange}
+                        className="form-input"
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="message">Message:</label>
+                    <label htmlFor="message" className="form-label">
+                        Message:
+                    </label>
                     <textarea
                         id="message"
                         name="message"
                         value={message}
                         onChange={handleChange}
+                        className="form-input"
                         required
+                        style={{ resize: 'none' }}
                     ></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
+                <button type="submit" className="form-button">
+                    Submit
+                </button>
             </form>
         </section>
     );

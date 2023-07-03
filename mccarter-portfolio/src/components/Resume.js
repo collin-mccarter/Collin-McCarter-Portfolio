@@ -2,8 +2,7 @@ import React from 'react';
 
 const Resume = () => {
     const handleDownload = () => {
-        // Replace the 'resume.pdf' with the actual path or URL of your resume PDF file
-        window.open('/path/to/resume.pdf', '_blank');
+        window.open('./assets/Collin McCarter Resume.pdf');
     };
 
     return (

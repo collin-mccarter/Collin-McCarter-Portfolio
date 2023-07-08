@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Collin-McCarter-Portfolio/static/css/main.2a749617.css",
-    "main.js": "/Collin-McCarter-Portfolio/static/js/main.f26331c6.js",
+    "main.js": "/Collin-McCarter-Portfolio/static/js/main.a363f981.js",
     "index.html": "/Collin-McCarter-Portfolio/index.html",
     "main.2a749617.css.map": "/Collin-McCarter-Portfolio/static/css/main.2a749617.css.map",
-    "main.f26331c6.js.map": "/Collin-McCarter-Portfolio/static/js/main.f26331c6.js.map"
+    "main.a363f981.js.map": "/Collin-McCarter-Portfolio/static/js/main.a363f981.js.map"
   },
   "entrypoints": [
     "static/css/main.2a749617.css",
-    "static/js/main.f26331c6.js"
+    "static/js/main.a363f981.js"
   ]
 }

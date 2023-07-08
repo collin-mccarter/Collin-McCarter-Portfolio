@@ -6,7 +6,7 @@ const AboutMe = () => {
             <div className='about-me-header'>
                 <h2>About Me:</h2>
             </div>
-            <img src="./assets/Screenshot 2023-06-24 at 1.42.36 PM.png" className="profile-pic" alt="Profile" />
+            <img src="/Collin-McCarter-Portfolio/assets/Screenshot 2023-06-24 at 1.42.36 PM.png" className="profile-pic" alt="Profile" />
             <p>
                 My name is Collin McCarter and I am a recent graduate of a Full-Stack Web Development Coding Bootcamp through the University of Texas at Austin.
             </p>

@@ -100,6 +100,10 @@ const Contact = () => {
                     Submit
                 </button>
             </form>
+
+            <h3>Contact Directly At:</h3>
+            <p>Email: <a href="mailto:collinmccarter12@gmail.com">collinmccarter12@gmail.com</a></p>
+            <p>Phone: <a href="tel:+2145382433">(214)538-2433</a></p>
         </section>
     );
 };

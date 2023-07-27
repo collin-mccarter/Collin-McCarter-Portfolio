@@ -4,6 +4,13 @@ const Projects = () => {
    // Array of project data
    const projects = [
       {
+         title: 'BringMe!',
+         description: 'Bring Me! is a real-life treasure hunt game where players can solve riddles by looking for objects to earn points. This project aims to provide a fun and engaging gaming experience where players can participate individually or globally to find hidden treasures and win exciting rewards.',
+         deployLink: 'https://main--stalwart-daifuku-cb0dbf.netlify.app/',
+         repoLink: 'https://github.com/MogleyBear06/Bring-Me',
+         image: '/Collin-McCarter-Portfolio/assets/BringMe.png'
+      },
+      {
          title: 'Beat Spotify',
          description: 'The purpose of this project was to use everything we have learned in the past 6 modules to create a font-end application. The application is a lighthearted game designed to use two server-side APIs that provides the album images for a user and also uses another API to search for song lyrics. The goal of the game is to guess as many songs correct in a row, and your score will be logged in a local highscore table.',
          deployLink: 'https://bocabooii.github.io/Beat-Spotify/',
